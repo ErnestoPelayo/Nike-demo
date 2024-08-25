@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { db } from "../helpers/db"; // Asegúrate de que la ruta es correcta
 
 const Carrousel = () => {
@@ -15,9 +15,7 @@ const Carrousel = () => {
 
   return (
     <div className="relative w-5/6 flex justify-center  h-96">
-      {/* Carrusel Wrapper */}
       <div className="relative w-full h-full overflow-hidden rounded-lg">
-        {/* Slides */}
         <div className="relative h-full flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
           {slides.map((item) => (
             <div
@@ -32,7 +30,6 @@ const Carrousel = () => {
             </div>
           ))}
         </div>
-        {/* Navigation Dots */}
         <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
           {slides.map((_, index) => (
             <button
@@ -44,7 +41,6 @@ const Carrousel = () => {
             ></button>
           ))}
         </div>
-        {/* Previous Button */}
         <button
           type="button"
           className="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 z-30 bg-white/30 dark:bg-gray-800/30"
@@ -53,7 +49,6 @@ const Carrousel = () => {
         >
           <span className="text-black dark:text-white text-2xl">&#9664;</span>
         </button>
-        {/* Next Button */}
         <button
           type="button"
           className="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 z-30 bg-white/30 dark:bg-gray-800/30"
