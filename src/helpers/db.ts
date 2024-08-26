@@ -25,4 +25,10 @@ export const db :ShoesClass[] = [
         image:"/shoes/green.png",
         price:200
     },
+    {
+        id:5,
+        name:"Cortez",
+        image:"/shoes/purple.png",
+        price:200
+    },
 ]
